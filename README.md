@@ -1,2 +1,3 @@
-# teaching-python
-Resources and codes for teaching python.
+# Teaching Python
+
+All resources of my python classes are here.
