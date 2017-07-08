@@ -16,6 +16,8 @@ As a developer we need an environment to code in it. The best environment that I
 
 An integrated development environment like pycharm isn't exactly what need for most of this course. We are dealing with watching effects of each line of code we write. [Jupyter](https://jupyter.org/) is what we use here.
 
+Python is a scripting language. This is an advantage that we will get familiar through the course.
+
 ## Hello Python
 
 There is a tradition in learning programming languages, called _Hello World_ program. We are going to respect the traditions and do it.
@@ -33,19 +35,62 @@ Python have libraries. `pip` is a program that can install and remove your packa
 Consider situations like 2 projects with same dependencies of different versions. Like `pip`, `virtualenv`  helps you manage your packages but in different way.
 
 ```bash
-$ virtualenv .venv    # Creating python virtual environment
+$ virtualenv .venv           # Creating python virtual environment
 $ source .venv/bin/activate  # Activating virtual environment
-$ deactivate          # Deactivating virtual environment
+$ deactivate                 # Deactivating virtual environment
 ```
 
-3. Comments
-4. PEP8
-5. Numbers and Mathematics
-6. Variables and Naming
-7. Strings
-    1. Escape Sequences
-    2. Input from user
+# Comments
+
+Sharp \# and strings are your comments.
+
+# PEP8
+
+Python enhancement proposal documents are about everything. New features, community input on an issue, ... . Probably the most famous and useful one for us, is PEP8.
+
+Development is not a single handed anymore. It's a social effort. Groups of many people try to write a code for a same software. PEP8 helps for readability of code.
+
+We talk about it during the course and mention what you need to know about it.
+
+# Numbers and Mathematics
+
+## Integers
+
+Python support unlimited numbers. Your number can have millions of digits.
+
+`int()`
+
+### Booleans
+
+`False, True, bool()`
+
+## Reals
+
+### Floating Points
+
+IEEE 754, 32-bit, 64-bit.
+
+## Fractions
+
+### Decimal
+
+## Complex
+
+## Arithmetics
+`=, +, -, *, /, //, **, %`
+
+# Variables and Naming
+## Mutable Vs. Immutable
+`id()`
+
+# Strings & Bytes
+## Escape Sequences
+## Input from user
+## Indexing and Slicing
+## `in` Operator
+
 8. Functions
+    1. Don't Repeat Yourself (DRY)
     1. Parameters
         1. Passed by Reference
         2. Passed by Value
@@ -60,6 +105,7 @@ $ deactivate          # Deactivating virtual environment
 9. Decision Making
     1. if, elif, else
     2. <, <=, >, >=, ==, !=
+    3. Use `is` and `is not` instead of `==` for `True` and `False` comparison.
     2. True, False, and, or, not
         1. Use `is` for readability
     3. Binary operators
@@ -69,21 +115,23 @@ $ deactivate          # Deactivating virtual environment
     2. while
     3. break
     4. continue
-11. Lists
-    1. `append`
-    2. `del`
-    3. `len()`
-12. Indexing and Slicing
-10. Packing & Unpacking
-12. Tuples
-13. Dictionaries
-9. Files
+# Lists
+`append`, `del`, `len()`
+## Packing & Unpacking
+# Tuples
+
+Frozen Lists.
+
+# Dictionaries
+# Set
+# Files
     1. Reading
     2. Writing
     3. Appending
     4. Binary mode
     5. General Strings
-10. Modules
+10. Modules and Packages
+    1. Don't Repeat Yourself (DRY)
     1. Importing other modules
     2. Creating other modules
 10. Exceptions
@@ -114,3 +162,8 @@ Homeworks:
 
 Notes to talk:
 * Printing structures and customization.
+
+Examples:
+
+* Prime number function.
+* Prime number generator.
