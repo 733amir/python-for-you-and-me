@@ -89,22 +89,50 @@ IEEE 754, 32-bit, 64-bit.
 ## Indexing and Slicing
 ## `in` Operator
 
-8. Functions
-    1. Don't Repeat Yourself (DRY)
-    1. Parameters
-        1. Passed by Reference
-        2. Passed by Value
-        3. Default Value
-        4. Unordered Parameter Passing
-    2. Return
-    3. Documentation
-        1. Help
-    4. global
-    5. lambda
-    6. pass
+# Functions
+
+Functions can make coding easy. Splitting tasks and write them once. Improve readability.
+
+## Don't Repeat Yourself (DRY)
+## Parameters
+* Passed by Reference (mutable) & Value (immutable)
+* Positional argument
+* Keyword argument
+* Default values (becareful with default mutables!)
+* Variable positional arguments
+* Variable keyword arguments
+* Keyword only arguments
+
+## Return
+## Scope
+## Documentation
+
+PEP257 - Docstring conventions. Sphinx is use to generate python documentation.
+
+## global & nonlocal
+## lambda
+## pass
+
+## Recursive Functions
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return factorial(n - 1) * n
+```
+
+## Useful Tips
+* Functions should do one thing.
+* Functions should be small.
+* The fewer input parameters, the better.
+* Functions should be consistent in their return values.
+Functions shouldn't have side effects.
+
 9. Decision Making
     1. if, elif, else
     2. <, <=, >, >=, ==, !=
+    2. VALUE_1 if CONDITION else VALUE_2
     3. Use `is` and `is not` instead of `==` for `True` and `False` comparison.
     2. True, False, and, or, not
         1. Use `is` for readability
@@ -115,6 +143,8 @@ IEEE 754, 32-bit, 64-bit.
     2. while
     3. break
     4. continue
+    5. `__iter__()` and `__next__()` with `StopIteration` exception
+    6. `zip()`
 # Lists
 `append`, `del`, `len()`
 ## Packing & Unpacking
@@ -167,3 +197,4 @@ Examples:
 
 * Prime number function.
 * Prime number generator.
+* Web crawler.
