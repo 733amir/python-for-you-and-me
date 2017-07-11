@@ -105,6 +105,10 @@ Functions can make coding easy. Splitting tasks and write them once. Improve rea
 
 ## Return
 ## Scope
+
+`if`, `elif`, `else`, `for`, `while` is current scope.
+Function are new scope.
+
 ## Documentation
 
 PEP257 - Docstring conventions. Sphinx is use to generate python documentation.
@@ -143,8 +147,11 @@ Functions shouldn't have side effects.
     2. while
     3. break
     4. continue
+    5. Comprehensions
     5. `__iter__()` and `__next__()` with `StopIteration` exception
     6. `zip()`
+    7. `map()`
+    8. `filter()`
 # Lists
 `append`, `del`, `len()`
 ## Packing & Unpacking
@@ -153,7 +160,9 @@ Functions shouldn't have side effects.
 Frozen Lists.
 
 # Dictionaries
+## Comprehensions
 # Set
+## Comprehensions
 # Files
     1. Reading
     2. Writing
@@ -170,22 +179,91 @@ Frozen Lists.
     1. except
     1. finally
     4. assert
-11. Classes
-    1. Object Oriented Programming
-        1. Class
-        2. Object
-        3. Instance
-        4. Self
-        5. `__init__`
-        6. Attribute
-        7. Methods
-        8. Decorators
-        1. Inheritance (is a)
-        2. Composition (has a)
-11. `with`
-12. Generators
-    1. yield
-12. Small Project using Kivy or PyGame
+
+# Object Oriented Programming
+
+Good for easy code designing, reusability and readability.
+
+Concepts:
+* Objects
+    * State
+    * Behavior
+* Class
+    * Attributes
+    * Methods
+* Instances
+
+Simplest python class:  
+```python
+# A Class (code blueprints) that represent an Object (real world concepts).
+class simple:
+    pass
+
+# Creating an Instance of the object.
+simple_var = simple()
+```
+
+Class Attributes:  
+```python
+class Car:
+    number_of_wheels = 4
+
+# It's defined withing the structures of our class.
+print(Car.number_of_wheels)  # 4
+
+# Each instance can see it from the class.
+simple_car = Car()
+print(simple_car.number_of_wheels)  # 4
+
+# Class attributes updates through all instances.
+Car.number_of_wheels = 3
+not_so_simple_car = Car()
+print(not_so_simple_car.number_of_wheels)  # 3
+print(simple_car.number_of_wheels)  # 3
+```
+
+Class attribute can have shadows for each object instances.
+
+```python
+class Car:
+    number_of_wheels = 4
+
+strange_car = Car()
+
+# Altering class attribute through instances make specific class attribute values for them.
+strange_car.number_of_wheels = 18
+print(Car.number_of_wheels)  # 4
+print(strange_car.number_of_wheels)  # 18
+
+# But it will break updated through class structure.
+Car.number_of_wheels = 3
+print(strange_car.number_of_wheels)  # 18
+
+# Don't panic, you can bind your instance to your class again.
+del strange_car.number_of_wheels
+print(strange_car.number_of_wheels)  # 3
+```
+
+## Inheritance & Composition
+
+* Private and Public
+* `super()`
+
+## Special Methods
+
+[Here](http://www.diveintopython3.net/special-method-names.html)
+
+
+# Generators
+
+* `yield`
+* `yeild from`
+
+# Decorators
+
+Example: Decorator to calculate up execution time.
+
+## Decorator Factory
 
 Homeworks:
 * Describing what some codes do.
@@ -197,4 +275,6 @@ Examples:
 
 * Prime number function.
 * Prime number generator.
+* Fibonacci number recursive function.
+* Fibonacci number generator.
 * Web crawler.
