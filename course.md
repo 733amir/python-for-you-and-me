@@ -203,7 +203,8 @@ class simple:
 simple_var = simple()
 ```
 
-Class Attributes:  
+## Class Attributes
+
 ```python
 class Car:
     number_of_wheels = 4
@@ -244,15 +245,82 @@ del strange_car.number_of_wheels
 print(strange_car.number_of_wheels)  # 3
 ```
 
-## Inheritance & Composition
+## Access to Instance
 
-* Private and Public
-* `super()`
+Each method in a class have a default first argument that is not passed by what we code.
+
+```python
+class Person:
+    name = 'Nobody'
+    def print_name(self):
+        print(self.name)
+
+david = person()
+david.name = 'David'
+david.print_name()  # David
+```
+
+Now that we can access instances, we can define instance attributes.
+
+```python
+class Person:
+    def set(self, name, age):
+        self.name = name
+        self.birth_year = 2017 - age
+
+bob = Person()
+bob.set(name='Bod', age=27)
+```
 
 ## Special Methods
 
-[Here](http://www.diveintopython3.net/special-method-names.html)
+These methods have specific name and specific job. They have names that starts and ends with `__`
 
+When we are creating an instance, `__init__` is the very first method that get called automatically.
+
+```python
+class Person:
+    def set(self, name, age):
+        self.name, self.age = name, age
+
+alice = Person('Alice', 21)
+```
+
+You can find all information on special methods in [Here](http://www.diveintopython3.net/special-method-names.html).
+
+# Inheritance & Composition
+
+Main purpose of OOP is reusing existing codes. Inheritance (is-a relationship) and composition (has-a relationship) are
+two main ways to reuse code.
+
+```python
+class Engine:  # Base class, Parent class
+    def start(self):
+        print('Engine started.')
+
+    def stop(self):
+        print('Engine stopped.')
+
+# Composition
+class Car:
+    def __init__(self):
+        self.engine = Engine()
+
+# Inheritance
+class MechanicalEngine(Engine):  # Child class, Derived Class
+    def __init__(self):
+        self.max_speed = 120
+
+motorcycle_engine = MechanicalEngine()
+motorcycle_engine.start()  # MechanicalEngine class inherits attributes and methods of Engine class.
+```
+
+## Private and Public
+
+Each method or attribute of a class that starts with `__` is considered private and everything else is public. All
+special methods are private.
+
+* `super()`
 
 # Generators
 
