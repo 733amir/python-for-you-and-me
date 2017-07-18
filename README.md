@@ -2,6 +2,8 @@
 
 I am trying to create a small book about Python programming language.
 
+You can see a HTML version of it in your browser [here](https://733amir.github.io/python-for-you-and-me).
+
 ## Do you need this book?
 
 If you are:
