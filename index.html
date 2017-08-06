@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1><p>Hello dear reader. This book is design for newcomers to Python with little knowledge on basic programming and to serve instructor as a path.</p>
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1><p>Hello dear reader. This book is design for newcomers to Python with little knowledge on basic programming. Instructors can used it as a guide for teaching Python.</p>
 
 </div>
 </div>
@@ -11786,10 +11786,10 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Basics">Basics<a class="anchor-link" href="#Basics">&#182;</a></h2><ul>
 <li><strong>Central Processing Unit</strong>: Very very fast but simple calculator. It is always asking what to calculate next?</li>
-<li><strong>Main Memory</strong>: Very fast temporary storage that save all answer to CPU. Answers are actually code and data that help to shape the way CPU work with data.</li>
-<li><strong>Input Devices</strong>: Things that you give information to computer with them. Keyboard, Mouse, Touch Screen, Microphone, ... .</li>
-<li><strong>Output Devices</strong>: Things that computer give information to you with them. Screen, Speakers, Printer, ... .</li>
-<li><strong>Secondary Memory</strong>: If power goes down, main memory is erase immediately. That's where secondary memory walks in. It's stores huge data and won't lost them without power. Why we shouldn't use secondary memory instead of main memory? Because it is too slow!</li>
+<li><strong>Main Memory</strong>: Very fast temporary storage that save all instruction and data for CPU.</li>
+<li><strong>Input Devices</strong>: Devices that is used to give computer any kind of information, like Keyboards, Mouses, Touch Screens, Microphones, ... .</li>
+<li><strong>Output Devices</strong>: Devices that computer use to give information to you with them, like Screens, Speakers, Printers, ... .</li>
+<li><strong>Secondary Memory</strong>: If power goes down, main memory erased immediately. That's where secondary memory walks in. It's stores huge data and won't lost them without power. Why we shouldn't use secondary memory instead of main memory? Because it is too slow!</li>
 </ul>
 
 </div>
@@ -11802,7 +11802,7 @@ div#notebook {
 <h2 id="Our-Minds-Vs.-Computer-Programs">Our Minds Vs. Computer Programs<a class="anchor-link" href="#Our-Minds-Vs.-Computer-Programs">&#182;</a></h2><p>Read text below quickly:</p>
 <blockquote><p>Python has a deisgn philozophy which emphasizes code readebility (notably using whitespece indentetion to delimit code blucks rather than curly brackats or keywords), and a syntax which allows programmers to express concepts in fewer lines of code than might be used in langoages such as C++ or Java. The langoage provides constructs intended to enable writing clear progrems on both a small and large scale.</p>
 </blockquote>
-<p>There are many mistakes in the above text. Did you saw them? If yes, good for you! If no, that is the most important difference between a computer and a human brain. Human know how to solve problems but computers are just stupid fast and powerful calculators!</p>
+<p>There are many mistakes in the above text. Did you saw them? All of them?! If yes, good for you! If no, that is the most important difference between a computer and a human brain. Humans know how to solve problems automatically, we almost never see many of details, but computers are just fast and studpid calculators!</p>
 <p>Remember every thing that computer is doing should be told to it. Computers doesn't have a brain, they are just very advanced calculators.</p>
 
 </div>
@@ -11814,7 +11814,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="What-is-Python?">What is Python?<a class="anchor-link" href="#What-is-Python?">&#182;</a></h2><p><a href="https://www.python.org/">Python</a> is an interpreted, general purposed language that is designed in 1991 by Guido Van Rossum. Python can be used for object oriented and functional programming. The language usage areas are tremendous. Some of them are, system programming, graphical user interfaces, game development, developing back-end, machine learning, visualizing data, media processing, scientific programming and many many more.</p>
 <p>Python have very readable and simple syntax to write code. Nowadays python frameworks and libraries are every where.</p>
-<p>There is only one drawback with python. That's runtime speed. But even this problem is almost solved by <a href="https://pypy.org/">PyPy</a> project.</p>
+<p>There is only one drawback with python, runtime speed. But even this problem is almost solved by <a href="https://pypy.org/">PyPy</a> project and many libararies like <a href="http://www.numpy.org/">numpy</a> and <a href="https://numba.pydata.org/">numby</a>.</p>
 
 </div>
 </div>
@@ -11877,6 +11877,15 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>Make Python write your name.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12011,7 +12020,7 @@ Hello Mickey Mouse!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h1><p>Variables are <strong>labeled places</strong> that you can store data in them. We use <strong>all lowercase underscore separated</strong> alphabets and numbers for variables. Never start a variable with a number. Python names are <strong>case sensitive</strong>.</p>
+<h1 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h1><p>Variables are <strong>labeled places</strong> that you can store data in them. We use <strong>all lowercase underscore separated</strong> alphabets and numbers for variables. Never start a variable with a number. Python names are <strong>case sensitive</strong>. Variable names can't have spaces.</p>
 
 </div>
 </div>
@@ -12057,6 +12066,37 @@ Hello Mickey Mouse!
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">4096</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1044388881413152506691752710716624382579964249047383780384233483283953907971557456848826811934997558340890106714439262837987573438185793607263236087851365277945956976543709998340361590134383718314428070011855946226376318839397712745672334684344586617496807908705803704071284048740118609114467977783598029006686938976881787785946905630190260940599579453432823469303026696443059025015972399867714215541693835559885291486318237914434496734087811872639496475100189041349008417061675093668333850551032972088269550769983616369411933015213796825837188091833656751221318492846368125550225998300412344784862595674492194617023806505913245610825731835380087608622102834270197698202313169017678006675195485079921636419370285375124784014907159135459982790513399611551794271106831134090584272884279791554849782954323534517065223269061394905987693002122963395687782878948440616007412945674919823050571642377154816321380631045902916136926708342856440730447899971901781465763473223850267253059899795996090799469201774624817718449867455659250178329070473119433165550807568221846571746373296884912819520317457002440926616910874148385078411929804522981857338977648103126085903001302413467189726673216491511131602920781738033436090243804708340403154190336
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12068,7 +12108,7 @@ Hello Mickey Mouse!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Arithmetic operators. Upper operators group have higher priority.</span>
@@ -12082,7 +12122,7 @@ Hello Mickey Mouse!
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;25 % 7:  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">25</span> <span class="o">%</span> <span class="mi">7</span><span class="p">))</span>   <span class="c1"># Reminder operator</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;23 + 45: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">23</span> <span class="o">+</span> <span class="mi">45</span><span class="p">))</span>  <span class="c1"># Addition operator</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;21 - 8:  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">21</span> <span class="o">-</span> <span class="mi">8</span><span class="p">))</span>   <span class="c1"># Subtraction operator</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;21 - 8:  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">21</span> <span class="o">-</span> <span class="mi">108</span><span class="p">))</span>   <span class="c1"># Subtraction operator</span>
 
 <span class="n">number</span> <span class="o">=</span> <span class="mi">12</span>     <span class="c1"># Assignment operator</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number:  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
@@ -12108,7 +12148,7 @@ Hello Mickey Mouse!
 10 // 3: 3
 25 % 7:  4
 23 + 45: 68
-21 - 8:  13
+21 - 8:  -87
 number:  12
 </pre>
 </div>
@@ -12186,19 +12226,16 @@ number:  12
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What number is save in x?</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">7</span>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>What number is save in x?</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">7</span>
 </pre></div>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12211,7 +12248,7 @@ number:  12
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;35 / 5      = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">35</span> <span class="o">/</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Result is a floating point number</span>
@@ -12367,7 +12404,7 @@ number:  12
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book_author</span> <span class="o">=</span> <span class="s1">&#39;Amir Khazaie&#39;</span>
@@ -12390,7 +12427,7 @@ number:  12
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book_description</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
@@ -12401,9 +12438,100 @@ number:  12
 <span class="n">book_license</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">This book is under Creative Common license.</span>
 <span class="s2">so feel free to contribute to it and read it.&quot;&quot;&quot;</span>
+
+<span class="n">third_way</span> <span class="o">=</span> <span class="s1">&#39;This is a</span><span class="se">\</span>
+<span class="s1">very very long</span><span class="se">\</span>
+<span class="s1">string&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">book_description</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+This book is about Python programming language.
+I started this book as a guideline for instructors
+and who wants to learn python not as a first programming language.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">book_license</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+This book is under Creative Common license.
+so feel free to contribute to it and read it.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">third_way</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is avery very longstring
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12419,16 +12547,16 @@ number:  12
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">greetings</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span> <span class="o">+</span> <span class="s1">&#39;Goofy&#39;</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greetings: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">greetings</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greetings: &quot;</span> <span class="o">+</span> <span class="n">greetings</span><span class="p">)</span>
 
 <span class="n">firstname</span> <span class="o">=</span> <span class="s2">&quot;Felonius&quot;</span>
 <span class="n">lastname</span>  <span class="o">=</span> <span class="s2">&quot;Gru&quot;</span>
 <span class="n">fullname</span>  <span class="o">=</span> <span class="n">firstname</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">lastname</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Full Name: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fullname</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Full Name: </span><span class="si">{}</span><span class="s1">, greeting: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fullname</span><span class="p">,</span> <span class="n">greetings</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12530,7 +12658,7 @@ Full Name: Felonius Gru
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Format">Format<a class="anchor-link" href="#Format">&#182;</a></h2><p>As you hvae seen, there is a <code>format</code> method for string objects that will try to make a new string. This method try to put arguments passed to it in <code>{}</code>.</p>
+<h2 id="Format">Format<a class="anchor-link" href="#Format">&#182;</a></h2><p>As you have seen, there is a <code>format</code> method for string objects that will try to make a new string. This method try to put arguments passed to it in <code>{}</code>.</p>
 <p>This is somehow like <code>printf</code> structure in <code>C/C++</code>.</p>
 
 </div>
@@ -12541,7 +12669,9 @@ Full Name: Felonius Gru
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You can put numbers: </span><span class="si">{}</span><span class="s1">, strings: </span><span class="si">{}</span><span class="s1"> in it to print.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="s1">&#39;#TEST#&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You can put numbers: </span><span class="si">{}</span><span class="s1">,</span><span class="se">\</span>
+<span class="s1">      strings: </span><span class="si">{}</span><span class="s1"> in it to print.&#39;</span>\
+      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="s1">&#39;#TEST#&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12581,7 +12711,9 @@ Full Name: Felonius Gru
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;List: </span><span class="si">{}</span><span class="s1">, Dictionary: </span><span class="si">{}</span><span class="s1"> and Set </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="mi">110</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">],</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;List: </span><span class="si">{}</span><span class="s1">, Dictionary: </span><span class="si">{}</span><span class="s1"> and Set </span><span class="si">{}</span><span class="s1">.&#39;</span>\
+      <span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="mi">110</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">],</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span>\
+              <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}))</span>
 </pre></div>
 
 </div>
@@ -12607,6 +12739,38 @@ Full Name: Felonius Gru
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;ali&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>l
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12620,7 +12784,8 @@ Full Name: Felonius Gru
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Second arg: </span><span class="si">{1}</span><span class="s1">, First arg: </span><span class="si">{0}</span><span class="s1">, Second arg again: </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;FIRST&#39;</span><span class="p">,</span> <span class="s1">&#39;SECOND&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Second arg: </span><span class="si">{1}</span><span class="s1">, First arg: </span><span class="si">{0}</span><span class="s1">,</span><span class="se">\</span>
+<span class="s1">Second arg again: </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;FIRST&#39;</span><span class="p">,</span> <span class="s1">&#39;SECOND&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12659,7 +12824,8 @@ Full Name: Felonius Gru
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First Name: </span><span class="si">{firstname}</span><span class="s1">, Last Name: </span><span class="si">{lastname}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">firstname</span><span class="o">=</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="n">lastname</span><span class="o">=</span><span class="s1">&#39;Wazowski&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First Name: </span><span class="si">{firstname}</span><span class="s1">, Last Name: </span><span class="si">{lastname}</span><span class="s1">&#39;</span>\
+      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">firstname</span><span class="o">=</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="n">lastname</span><span class="o">=</span><span class="s1">&#39;Wazowski&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12843,7 +13009,7 @@ Hiro Hamada: &#34;What?!&#34;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Student Results:</span><span class="se">\n\n</span><span class="s1">Name</span><span class="se">\t</span><span class="s1">Mark</span><span class="se">\n</span><span class="s1">Jodi</span><span class="se">\t</span><span class="s1">80</span><span class="se">\n</span><span class="s1">Frank</span><span class="se">\t</span><span class="s1">30</span><span class="se">\n</span><span class="s1">Bob</span><span class="se">\t</span><span class="s1">67&#39;</span><span class="p">)</span>
@@ -12851,12 +13017,18 @@ Hiro Hamada: &#34;What?!&#34;
 <span class="c1"># Above and below have the same output.</span>
 <span class="c1"># In code below we use backsplash to tell python interpreter to ingnore newlines.</span>
 
-<span class="c1"># print(&#39;Student Results:\n\</span>
-<span class="c1"># \n\</span>
-<span class="c1"># Name\tMark\n\</span>
-<span class="c1"># Jodi\t80\n\</span>
-<span class="c1"># Frank\t30\n\</span>
-<span class="c1"># Bob\t67&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Student Results:</span><span class="se">\n\</span>
+<span class="se">\n\</span>
+<span class="s1">Name</span><span class="se">\t</span><span class="s1">Mark</span><span class="se">\n\</span>
+<span class="s1">Jodi</span><span class="se">\t</span><span class="s1">80</span><span class="se">\n\</span>
+<span class="s1">Frank</span><span class="se">\t</span><span class="s1">30</span><span class="se">\n\</span>
+<span class="s1">Bob</span><span class="se">\t</span><span class="s1">67&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;Student Results:</span>
+
+<span class="s1">Name</span><span class="se">\t</span><span class="s1">Mark</span>
+<span class="s1">Jodi</span><span class="se">\t</span><span class="s1">80</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12898,7 +13070,7 @@ Bob	67
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>  <span class="c1"># The output is always a string.</span>
@@ -12919,8 +13091,8 @@ Bob	67
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>User input
-User input
+<pre>user input
+user input
 </pre>
 </div>
 </div>
@@ -12931,10 +13103,10 @@ User input
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>  <span class="c1"># You can ask user for special kind of information.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>  <span class="c1"># You can ask user for special kind of information.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 </pre></div>
 
@@ -12952,7 +13124,7 @@ User input
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>What is your name?Tadashi Hamada
+<pre>What is your name? Tadashi Hamada
 Hello Tadashi Hamada.
 </pre>
 </div>
@@ -12966,6 +13138,15 @@ Hello Tadashi Hamada.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>Ask name and age of user and printing something nice for them.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Indexing">Indexing<a class="anchor-link" href="#Indexing">&#182;</a></h2><p>We said strings are created from characters. You can select characters in a string in very customize way.</p>
 
 </div>
@@ -12973,7 +13154,7 @@ Hello Tadashi Hamada.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_string</span> <span class="o">=</span> <span class="s1">&#39;Hi. This is a simple string that we will use as an example.&#39;</span>
@@ -12998,7 +13179,8 @@ Hello Tadashi Hamada.
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1st character is: </span><span class="si">{}</span><span class="se">\n</span><span class="s1">5th character is: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">the_string</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">the_string</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1st character is: </span><span class="si">{}</span><span class="se">\n</span><span class="s1">5th character is: </span><span class="si">{}</span><span class="s1">&#39;</span>\
+      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">the_string</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">the_string</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -13155,10 +13337,41 @@ Hello Tadashi Hamada.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">the_string</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span><span class="p">])</span>  <span class="c1"># [start:end:step]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">the_string</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hi. This is a simple string that we will use as an example.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">the_string</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span><span class="p">])</span>  <span class="c1"># [start stop)</span>
 </pre></div>
 
 </div>
@@ -13312,6 +13525,17 @@ Hello Tadashi Hamada.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>Use message below and generate word <strong>gun</strong> with slice operator.</p>
+<div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&quot;Simplicity is about subtracting the obvious and adding the meaningful.&quot; - John Maeda&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="in-Operator"><code>in</code> Operator<a class="anchor-link" href="#in-Operator">&#182;</a></h2><p>Checks for existence of string in another string.</p>
 
 </div>
@@ -13351,10 +13575,10 @@ Hello Tadashi Hamada.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greeting_contains_hi</span> <span class="o">=</span> <span class="s1">&#39;hi&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Hi, how are you?&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greeting_contains_hi</span> <span class="o">=</span> <span class="s1">&#39;hi&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Hi, how are you?&#39;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">greeting_contains_hi</span><span class="p">)</span>
 </pre></div>
 
@@ -13372,7 +13596,7 @@ Hello Tadashi Hamada.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>False
+<pre>True
 </pre>
 </div>
 </div>
@@ -13435,7 +13659,8 @@ Hello Tadashi Hamada.
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What you see when you print true: </span><span class="si">{}</span><span class="s2"> and false: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What you see when you print</span><span class="se">\</span>
+<span class="s2">true: </span><span class="si">{}</span><span class="s2"> and false: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13507,8 +13732,12 @@ Hello Tadashi Hamada.
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Strings: bool(&#39;A&#39;): </span><span class="si">{}</span><span class="s2">, bool(&#39;Python is a wonderful language.&#39;): </span><span class="si">{}</span><span class="s2">, bool(&#39;&#39;): </span><span class="si">{}</span><span class="s2">&quot;</span>
-      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;Python is a wonderful language.&#39;</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Strings: bool(&#39;A&#39;): </span><span class="si">{}</span><span class="s2">,</span><span class="se">\</span>
+<span class="s2">bool(&#39;Python is a wonderful language.&#39;): </span><span class="si">{}</span><span class="s2">,</span><span class="se">\</span>
+<span class="s2">bool(&#39;&#39;): </span><span class="si">{}</span><span class="s2">&quot;</span>
+      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span>\
+              <span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;Python is a wonderful language.&#39;</span><span class="p">),</span>\
+              <span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -13586,7 +13815,7 @@ Hello Tadashi Hamada.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
@@ -13624,7 +13853,7 @@ Last Prime Number: 23
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Lists can have multiple data types at the same time! A list can have integers, floats, string, lists (!), ... .</p>
+<p>Lists can have multiple data types at the same time! A list can have integers, floats, string and even other lists!</p>
 
 </div>
 </div>
@@ -13694,7 +13923,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">primes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
@@ -13726,7 +13955,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">primes</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">37</span><span class="p">])</span>
@@ -13974,7 +14203,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">positive_nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -14049,7 +14278,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">integers</span>
@@ -14065,7 +14294,7 @@ Last Prime Number: 23
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[52]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -14082,7 +14311,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="ow">in</span> <span class="n">integers</span>
@@ -14098,7 +14327,7 @@ Last Prime Number: 23
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[53]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -14207,7 +14436,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Emma&#39;</span><span class="p">,</span> <span class="s1">&#39;Noah&#39;</span><span class="p">,</span> <span class="s1">&#39;Olivia&#39;</span><span class="p">,</span> <span class="s1">&#39;Liam&#39;</span><span class="p">,</span> <span class="s1">&#39;Sophia&#39;</span><span class="p">,</span> <span class="s1">&#39;Mason&#39;</span><span class="p">,</span> <span class="s1">&#39;Ava&#39;</span><span class="p">,</span> <span class="s1">&#39;Jacob&#39;</span><span class="p">,</span> <span class="s1">&#39;William&#39;</span><span class="p">,</span> <span class="s1">&#39;Isabella&#39;</span><span class="p">]</span>
@@ -14250,7 +14479,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">students</span><span class="p">)</span>
@@ -14281,7 +14510,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">students</span><span class="p">)</span>  <span class="c1"># Is equal to print(&#39;Noah&#39;, &#39;Olivia&#39;, ...)</span>
@@ -14321,7 +14550,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># No packing or unpacking. No usage here.</span>
@@ -14337,7 +14566,7 @@ Last Prime Number: 23
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[59]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14448,6 +14677,48 @@ Last Prime Number: 23
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Iran&#39;</span><span class="p">]</span>
+
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;UK&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">countries</span>
+<span class="c1">#countries.insert(0, &#39;UK&#39;)</span>
+
+<span class="k">del</span> <span class="n">countries</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># Deleting Germany</span>
+<span class="c1"># countries.remove(&#39;Germany&#39;)</span>
+
+<span class="c1"># countries = countries + [&#39;Canada&#39;]</span>
+<span class="n">countries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Canada&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;UK&#39;, &#39;USA&#39;, &#39;France&#39;, &#39;Iran&#39;, &#39;Canada&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14459,7 +14730,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">alvin_marks</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
@@ -14482,7 +14753,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">woody_marks</span> <span class="o">=</span> <span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mf">18.5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
@@ -14515,7 +14786,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">alvin_got_12</span> <span class="o">=</span> <span class="mi">12</span> <span class="ow">in</span> <span class="n">alvin_marks</span>
@@ -14537,6 +14808,38 @@ Last Prime Number: 23
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Alving got 12? True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(12,)
 </pre>
 </div>
 </div>
@@ -14680,7 +14983,8 @@ Last Prime Number: 23
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">per2eng_dict</span><span class="p">[</span><span class="mi">1396</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2017</span>
-<span class="n">per2eng_dict</span><span class="p">[(</span><span class="s1">&#39;شنبه&#39;</span><span class="p">,</span> <span class="s1">&#39;یک شنبه&#39;</span><span class="p">,</span> <span class="s1">&#39;دو شنبه&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;saturday&#39;</span><span class="p">,</span> <span class="s1">&#39;sunday&#39;</span><span class="p">,</span> <span class="s1">&#39;monday&#39;</span><span class="p">)</span>
+<span class="n">per2eng_dict</span><span class="p">[(</span><span class="s1">&#39;شنبه&#39;</span><span class="p">,</span> <span class="s1">&#39;یک شنبه&#39;</span><span class="p">,</span> <span class="s1">&#39;دو شنبه&#39;</span><span class="p">)]</span> <span class="o">=</span> \
+<span class="p">(</span><span class="s1">&#39;saturday&#39;</span><span class="p">,</span> <span class="s1">&#39;sunday&#39;</span><span class="p">,</span> <span class="s1">&#39;monday&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">per2eng_dict</span><span class="p">)</span>
 </pre></div>
@@ -14771,6 +15075,96 @@ Last Prime Number: 23
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>dict_values([&#39;Hello&#39;, 2017, &#39;Goodbye&#39;, &#39;Python&#39;, (&#39;saturday&#39;, &#39;sunday&#39;, &#39;monday&#39;), &#39;How is it going?&#39;])
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Another example for dictionaries is in simple cryptography algorithm called substitution.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;abc&#39;</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[(1, &#39;a&#39;), (2, &#39;b&#39;), (3, &#39;c&#39;)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ciphertext</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;QRNE NYVPR,</span>
+
+<span class="s1">V NZ N FCL NAQ JBEXVAT SBE HAVGRQ XVATQBZ. NF GUR SVEFG QNL V FGNEG ZL JBEX URER LBH JNF NYJNLF XVAQ GB ZR.</span>
+<span class="s1">V JVYY ARIRE SBETRG LBHE URYCF.</span>
+
+<span class="s1">FVAPRERYL, FNEN.&#39;&#39;&#39;</span>
+
+<span class="c1"># Key for encryption and decryption.</span>
+<span class="n">subs</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">j</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;NOPQRSTUVWXYZABCDEFGHIJKLM&#39;</span><span class="p">)}</span>
+<span class="c1"># Characters that is not encrypted.</span>
+
+
+<span class="n">plaintext</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">subs</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">ciphertext</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>DEAR ALICE,
+
+I AM A SPY AND WORKING FOR UNITED KINGDOM. AS THE FIRST DAY I START MY WORK HERE YOU WAS ALWAYS KIND TO ME.
+I WILL NEVER FORGET YOUR HELPS.
+
+SINCERELY, SARA.
 </pre>
 </div>
 </div>
@@ -15153,7 +15547,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>
@@ -15164,6 +15558,9 @@ Last Prime Number: 23
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)))</span>
+
+<span class="n">set2str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">([]))</span>
 </pre></div>
 
 </div>
@@ -15186,6 +15583,7 @@ Last Prime Number: 23
 3.14
 [1, 2, 3, 4]
 {1, 2, 4, 5, 9, 10}
+&lt;class &#39;list&#39;&gt;
 </pre>
 </div>
 </div>
@@ -15251,7 +15649,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book_title</span> <span class="o">=</span> <span class="s2">&quot;Python for You and Me&quot;</span>
@@ -15260,6 +15658,8 @@ Last Prime Number: 23
 <span class="n">new_book_title</span> <span class="o">=</span> <span class="s2">&quot;Python 4 U &amp; Me&quot;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">book_title</span><span class="p">)</span>
+
+<span class="n">book_title</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
 </pre></div>
 
 </div>
@@ -15278,6 +15678,24 @@ Last Prime Number: 23
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Python for You and Me
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-15-81334d3a043d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> print<span class="ansi-blue-fg">(</span>book_title<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> 
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span>book_title<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;a&#39;</span>
+
+<span class="ansi-red-fg">TypeError</span>: &#39;str&#39; object does not support item assignment</pre>
 </div>
 </div>
 
@@ -15320,13 +15738,15 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">secret_knock</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is the secret knock? &#39;</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">secret_knock</span> <span class="o">==</span> <span class="s1">&#39;1 2 1 3&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct, you can get in.&#39;</span><span class="p">)</span>  <span class="c1"># This is indented code. This code is sub-code of if statement.</span>
+<span class="k">if</span> <span class="n">secret_knock</span> <span class="o">!=</span> <span class="s1">&#39;1 2 1 3&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect!&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15343,8 +15763,7 @@ Last Prime Number: 23
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>What is the secret knock? 1 2 1 3
-Correct, you can get in.
+<pre>What is the secret knock? abc
 </pre>
 </div>
 </div>
@@ -15392,7 +15811,7 @@ That is correct.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">))</span>  <span class="c1"># input function return datatype is always a string.</span>
@@ -15402,10 +15821,10 @@ That is correct.
     <span class="n">where_to_go</span> <span class="o">=</span> <span class="s1">&#39;kindergarten&#39;</span>
 <span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
     <span class="n">where_to_go</span> <span class="o">=</span> <span class="s1">&#39;school&#39;</span>
-<span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">120</span><span class="p">:</span>
     <span class="n">where_to_go</span> <span class="o">=</span> <span class="s1">&#39;college&#39;</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">where_to_go</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">where_to_go</span> <span class="o">=</span> <span class="s1">&#39;grave&#39;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Then probabely you are going to </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">where_to_go</span><span class="p">))</span>
 </pre></div>
@@ -15516,9 +15935,11 @@ Then probabely you are going to kindergarten.
 <div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ali_age</span><span class="p">,</span> <span class="n">ali_school</span><span class="p">,</span> <span class="n">ali_friend</span> <span class="o">=</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;high school&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mohammad&#39;</span><span class="p">,</span> <span class="s1">&#39;mahdi&#39;</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ali_age</span><span class="p">,</span> <span class="n">ali_school</span><span class="p">,</span> <span class="n">ali_friend</span> <span class="o">=</span> \
+<span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;high school&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mohammad&#39;</span><span class="p">,</span> <span class="s1">&#39;mahdi&#39;</span><span class="p">}</span>
 
-<span class="n">amir_age</span><span class="p">,</span> <span class="n">amir_school</span><span class="p">,</span> <span class="n">amir_friend</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;high school&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;reza&#39;</span><span class="p">,</span> <span class="s1">&#39;mohammad&#39;</span><span class="p">}</span>
+<span class="n">amir_age</span><span class="p">,</span> <span class="n">amir_school</span><span class="p">,</span> <span class="n">amir_friend</span> <span class="o">=</span> \
+<span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;high school&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;reza&#39;</span><span class="p">,</span> <span class="s1">&#39;mohammad&#39;</span><span class="p">}</span>
 
 <span class="k">if</span> <span class="n">ali_school</span> <span class="o">==</span> <span class="n">amir_school</span> <span class="ow">and</span> <span class="n">ali_friend</span> <span class="o">&amp;</span> <span class="n">amir_friend</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ali and Amir are friends.&#39;</span><span class="p">)</span>
@@ -15623,6 +16044,20 @@ Then probabely you are going to kindergarten.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -15669,7 +16104,8 @@ Then probabely you are going to kindergarten.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are </span><span class="si">{}</span><span class="s1"> young.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;so&#39;</span> <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">25</span> <span class="k">else</span> <span class="s1">&#39;not so&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are </span><span class="si">{}</span><span class="s1"> young.&#39;</span>\
+      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;so&#39;</span> <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">25</span> <span class="k">else</span> <span class="s1">&#39;not so&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -15799,6 +16235,53 @@ Your name is on the list.
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="p">[[]]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;List is true.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;List is false.&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>List is true.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -15812,7 +16295,92 @@ Your name is on the list.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter a number please: &#39;</span><span class="p">))</span>
+
+<span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">user_num</span><span class="p">):</span>
+    <span class="n">is_prime</span> <span class="o">=</span> <span class="kc">True</span>
+    
+    <span class="k">for</span> <span class="n">prime</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="n">prime</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">is_prime</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="k">if</span> <span class="n">is_prime</span><span class="p">:</span>
+        <span class="n">primes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a number please: 100
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shop_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Egg&#39;</span><span class="p">,</span> <span class="s1">&#39;Milk&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shop_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We should buy </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is another print function.&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>We should buy Egg.
+This is another print function.
+We should buy Milk.
+This is another print function.
+We should buy ....
+This is another print function.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Which factorial number to calculate? &#39;</span><span class="p">))</span>
@@ -15933,7 +16501,8 @@ Factorial of 10 is 3628800.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">per2eng_dict</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;With key </span><span class="si">{}</span><span class="s1"> we get value </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">per2eng_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;With key </span><span class="si">{}</span><span class="s1"> we get value </span><span class="si">{}</span><span class="s1">.&#39;</span>\
+          <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">per2eng_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -15975,7 +16544,7 @@ With key خوبی؟ we get value How is it going?.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randint</span>
@@ -16010,22 +16579,20 @@ With key خوبی؟ we get value How is it going?.
 <pre>Guess a number: 500
 Bigger!
 Guess a number: 250
-Smaller!
-Guess a number: 325
-Smaller!
-Guess a number: 400
-Smaller!
-Guess a number: 450
 Bigger!
-Guess a number: 425
+Guess a number: 125
 Smaller!
-Guess a number: 437
+Guess a number: 175
 Bigger!
-Guess a number: 430
-Bigger!
-Guess a number: 420
+Guess a number: 150
 Smaller!
-Guess a number: 427
+Guess a number: 165
+Bigger!
+Guess a number: 160
+Smaller!
+Guess a number: 162
+Bigger!
+Guess a number: 161
 BINGO
 </pre>
 </div>
@@ -16467,7 +17034,7 @@ Enter english word: خداحافظ
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="k">import</span> <span class="n">pprint</span>  <span class="c1"># Better way</span>
@@ -16505,6 +17072,60 @@ Enter english word: خداحافظ
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Another way of nesting</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mul_tab_nums</span> <span class="o">=</span> <span class="p">{</span><span class="n">num</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">mul_tab</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">row</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mul_tab_nums</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 20, 25}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><ul>
+<li>Write a program and generate fibonacci numbers.</li>
+<li>Find greatest common divisor of two positive numbers.</li>
+<li>Generate a triangle with comprehensions.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -17578,7 +18199,74 @@ First -&gt; Third
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Print">Print<a class="anchor-link" href="#Print">&#182;</a></h3><p>We work with this one so many times. Print function have 3 labeled arguments:</p>
+<h3 id="help">help<a class="anchor-link" href="#help">&#182;</a></h3><p>Print a documentation on object passed to it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">help</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on _Helper in module _sitebuiltins object:
+
+class _Helper(builtins.object)
+ |  Define the builtin &#39;help&#39;.
+ |  
+ |  This is a wrapper around pydoc.help that provides a helpful message
+ |  when &#39;help&#39; is typed at the Python interactive prompt.
+ |  
+ |  Calling help() at the Python prompt starts an interactive help session.
+ |  Calling help(thing) prints help for the python object &#39;thing&#39;.
+ |  
+ |  Methods defined here:
+ |  
+ |  __call__(self, *args, **kwds)
+ |      Call self as a function.
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="print">print<a class="anchor-link" href="#print">&#182;</a></h3><p>We work with this one so many times. Print function have 3 labeled arguments:</p>
 <ul>
 <li><code>end</code>: Specify how to end a printed text.</li>
 <li><code>sep</code>: Specify separation of each argument passed to <code>print</code> function.</li>
@@ -18076,12 +18764,165 @@ First -&gt; Third
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="min/max">min/max<a class="anchor-link" href="#min/max">&#182;</a></h3><p>Get a sequence and compare each of objects inside the sequence with each other and return minimum/maximum value.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greeting</span> <span class="o">=</span><span class="s1">&#39;Hello World!&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min: &quot;</span><span class="si">{}</span><span class="s1">&quot;, Max: &quot;</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">greeting</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">greeting</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Min: &#34; &#34;, Max: &#34;r&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="o">-</span><span class="mi">52</span><span class="p">,</span> <span class="mi">158</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min: </span><span class="si">{}</span><span class="s1">, Max: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Min: -52, Max: 158
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="o">-</span><span class="mi">52</span><span class="p">,</span> <span class="mi">158</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min: </span><span class="si">{}</span><span class="s1">, Max: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Min: -52, Max: 158
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">marks</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;John&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;Sophia&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Sara&#39;</span><span class="p">:</span> <span class="mf">16.7</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min: </span><span class="si">{}</span><span class="s1">, Max: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">marks</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">marks</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Min: John, Max: Sophia
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Useful-Tips">Useful Tips<a class="anchor-link" href="#Useful-Tips">&#182;</a></h2><ul>
 <li>Functions should do one thing.</li>
 <li>Functions should be small.</li>
 <li>The fewer input parameters, the better.</li>
 <li>Functions should be consistent in their return values.
 Functions shouldn't have side effects.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2><ul>
+<li>Create a function that take a number of digit for precision and calculate $\pi$ with formula below.</li>
+</ul>
+$$\frac{\pi}{2} = 1 + \frac{1}{3} + \frac{1 \times 2}{3 \times 5} + \frac{1 \times 2 \times 3}{3 \times 5 \times 7} + \dots$$<p>Default precision should be 5 digits. You have to write proper documentation for your function.</p>
+<ul>
+<li>Print factors of a number (You will need a prime number generator function).</li>
+<li></li>
 </ul>
 
 </div>
@@ -18197,6 +19038,7 @@ Functions shouldn't have side effects.</li>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Line Number </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">line_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">rwfile</span><span class="p">)</span>
     <span class="n">rwfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
+<span class="nb">open</span><span class="p">(</span><span class="s1">&#39;rwfile&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Clear file.</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">rwfile_test</span><span class="p">()</span>
 </pre></div>
@@ -18319,10 +19161,804 @@ Line Number 9.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Easier-File-Handeling">Easier File Handeling<a class="anchor-link" href="#Easier-File-Handeling">&#182;</a></h2><p>For each file you should open it to use and then you have to close it. Without closing file, changes that you made to file will be ignored!</p>
+<p>It is easier to use <code>with</code> statement instead of opening and closing a file yourself.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;rwfile&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">rwfile</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rwfile</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Line Number 1.
+Line Number 2.
+Line Number 3.
+Line Number 4.
+Line Number 5.
+Line Number 6.
+Line Number 7.
+Line Number 8.
+Line Number 9.
+Line Number 10.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Modules">Modules<a class="anchor-link" href="#Modules">&#182;</a></h1><p>When your project is getting bigger you have to organize your codes into different files and even different folders. To create new modules just create a file with anyname you want and then import it into your own code when you need it.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>datetime
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2017-07-28 10:16:52.773547
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">datetime</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on module datetime:
+
+NAME
+    datetime - Fast implementation of the datetime type.
+
+MODULE REFERENCE
+    https://docs.python.org/3.5/library/datetime.html
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+CLASSES
+    builtins.object
+        date
+            datetime
+        time
+        timedelta
+        tzinfo
+            timezone
+    
+    class date(builtins.object)
+     |  date(year, month, day) --&gt; date object
+     |  
+     |  Methods defined here:
+     |  
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __format__(...)
+     |      Formats self with strftime.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |  
+     |  ctime(...)
+     |      Return ctime() style string.
+     |  
+     |  fromordinal(...) from builtins.type
+     |      int -&gt; date corresponding to a proleptic Gregorian ordinal.
+     |  
+     |  fromtimestamp(...) from builtins.type
+     |      timestamp -&gt; local date from a POSIX timestamp (like time.time()).
+     |  
+     |  isocalendar(...)
+     |      Return a 3-tuple containing ISO year, week number, and weekday.
+     |  
+     |  isoformat(...)
+     |      Return string in ISO 8601 format, YYYY-MM-DD.
+     |  
+     |  isoweekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 1 ... Sunday == 7
+     |  
+     |  replace(...)
+     |      Return date with new specified fields.
+     |  
+     |  strftime(...)
+     |      format -&gt; strftime() style string.
+     |  
+     |  timetuple(...)
+     |      Return time tuple, compatible with time.localtime().
+     |  
+     |  today(...) from builtins.type
+     |      Current date or datetime:  same as self.__class__.fromtimestamp(time.time()).
+     |  
+     |  toordinal(...)
+     |      Return proleptic Gregorian ordinal.  January 1 of year 1 is day 1.
+     |  
+     |  weekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 0 ... Sunday == 6
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  day
+     |  
+     |  month
+     |  
+     |  year
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.date(9999, 12, 31)
+     |  
+     |  min = datetime.date(1, 1, 1)
+     |  
+     |  resolution = datetime.timedelta(1)
+    
+    class datetime(date)
+     |  datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])
+     |  
+     |  The year, month and day arguments are required. tzinfo may be None, or an
+     |  instance of a tzinfo subclass. The remaining arguments may be ints.
+     |  
+     |  Method resolution order:
+     |      datetime
+     |      date
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |  
+     |  astimezone(...)
+     |      tz -&gt; convert to local time in new timezone tz
+     |  
+     |  combine(...) from builtins.type
+     |      date, time -&gt; datetime with same date and time fields
+     |  
+     |  ctime(...)
+     |      Return ctime() style string.
+     |  
+     |  date(...)
+     |      Return date object with same year, month and day.
+     |  
+     |  dst(...)
+     |      Return self.tzinfo.dst(self).
+     |  
+     |  fromtimestamp(...) from builtins.type
+     |      timestamp[, tz] -&gt; tz&#39;s local time from POSIX timestamp.
+     |  
+     |  isoformat(...)
+     |      [sep] -&gt; string in ISO 8601 format, YYYY-MM-DDTHH:MM:SS[.mmmmmm][+HH:MM].
+     |      
+     |      sep is used to separate the year from the time, and defaults to &#39;T&#39;.
+     |  
+     |  now(tz=None) from builtins.type
+     |      Returns new datetime object representing current time local to tz.
+     |      
+     |        tz
+     |          Timezone object.
+     |      
+     |      If no tz is specified, uses local timezone.
+     |  
+     |  replace(...)
+     |      Return datetime with new specified fields.
+     |  
+     |  strptime(...) from builtins.type
+     |      string, format -&gt; new datetime parsed from a string (like time.strptime()).
+     |  
+     |  time(...)
+     |      Return time object with same time but with tzinfo=None.
+     |  
+     |  timestamp(...)
+     |      Return POSIX timestamp as float.
+     |  
+     |  timetuple(...)
+     |      Return time tuple, compatible with time.localtime().
+     |  
+     |  timetz(...)
+     |      Return time object with same time and tzinfo.
+     |  
+     |  tzname(...)
+     |      Return self.tzinfo.tzname(self).
+     |  
+     |  utcfromtimestamp(...) from builtins.type
+     |      Construct a naive UTC datetime from a POSIX timestamp.
+     |  
+     |  utcnow(...) from builtins.type
+     |      Return a new datetime representing UTC day and time.
+     |  
+     |  utcoffset(...)
+     |      Return self.tzinfo.utcoffset(self).
+     |  
+     |  utctimetuple(...)
+     |      Return UTC time tuple, compatible with time.localtime().
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  hour
+     |  
+     |  microsecond
+     |  
+     |  minute
+     |  
+     |  second
+     |  
+     |  tzinfo
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.datetime(9999, 12, 31, 23, 59, 59, 999999)
+     |  
+     |  min = datetime.datetime(1, 1, 1, 0, 0)
+     |  
+     |  resolution = datetime.timedelta(0, 0, 1)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from date:
+     |  
+     |  __format__(...)
+     |      Formats self with strftime.
+     |  
+     |  fromordinal(...) from builtins.type
+     |      int -&gt; date corresponding to a proleptic Gregorian ordinal.
+     |  
+     |  isocalendar(...)
+     |      Return a 3-tuple containing ISO year, week number, and weekday.
+     |  
+     |  isoweekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 1 ... Sunday == 7
+     |  
+     |  strftime(...)
+     |      format -&gt; strftime() style string.
+     |  
+     |  today(...) from builtins.type
+     |      Current date or datetime:  same as self.__class__.fromtimestamp(time.time()).
+     |  
+     |  toordinal(...)
+     |      Return proleptic Gregorian ordinal.  January 1 of year 1 is day 1.
+     |  
+     |  weekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 0 ... Sunday == 6
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from date:
+     |  
+     |  day
+     |  
+     |  month
+     |  
+     |  year
+    
+    class time(builtins.object)
+     |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
+     |  
+     |  All arguments are optional. tzinfo may be None, or an instance of
+     |  a tzinfo subclass. The remaining arguments may be ints.
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __format__(...)
+     |      Formats self with strftime.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  dst(...)
+     |      Return self.tzinfo.dst(self).
+     |  
+     |  isoformat(...)
+     |      Return string in ISO 8601 format, HH:MM:SS[.mmmmmm][+HH:MM].
+     |  
+     |  replace(...)
+     |      Return time with new specified fields.
+     |  
+     |  strftime(...)
+     |      format -&gt; strftime() style string.
+     |  
+     |  tzname(...)
+     |      Return self.tzinfo.tzname(self).
+     |  
+     |  utcoffset(...)
+     |      Return self.tzinfo.utcoffset(self).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  hour
+     |  
+     |  microsecond
+     |  
+     |  minute
+     |  
+     |  second
+     |  
+     |  tzinfo
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.time(23, 59, 59, 999999)
+     |  
+     |  min = datetime.time(0, 0)
+     |  
+     |  resolution = datetime.timedelta(0, 0, 1)
+    
+    class timedelta(builtins.object)
+     |  Difference between two datetime values.
+     |  
+     |  Methods defined here:
+     |  
+     |  __abs__(self, /)
+     |      abs(self)
+     |  
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |  
+     |  __bool__(self, /)
+     |      self != 0
+     |  
+     |  __divmod__(self, value, /)
+     |      Return divmod(self, value).
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __floordiv__(self, value, /)
+     |      Return self//value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __mod__(self, value, /)
+     |      Return self%value.
+     |  
+     |  __mul__(self, value, /)
+     |      Return self*value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __neg__(self, /)
+     |      -self
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  __pos__(self, /)
+     |      +self
+     |  
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |  
+     |  __rdivmod__(self, value, /)
+     |      Return divmod(value, self).
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __rfloordiv__(self, value, /)
+     |      Return value//self.
+     |  
+     |  __rmod__(self, value, /)
+     |      Return value%self.
+     |  
+     |  __rmul__(self, value, /)
+     |      Return value*self.
+     |  
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |  
+     |  __rtruediv__(self, value, /)
+     |      Return value/self.
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |  
+     |  __truediv__(self, value, /)
+     |      Return self/value.
+     |  
+     |  total_seconds(...)
+     |      Total seconds in the duration.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  days
+     |      Number of days.
+     |  
+     |  microseconds
+     |      Number of microseconds (&gt;= 0 and less than 1 second).
+     |  
+     |  seconds
+     |      Number of seconds (&gt;= 0 and less than 1 day).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.timedelta(999999999, 86399, 999999)
+     |  
+     |  min = datetime.timedelta(-999999999)
+     |  
+     |  resolution = datetime.timedelta(0, 0, 1)
+    
+    class timezone(tzinfo)
+     |  Fixed offset from UTC implementation of tzinfo.
+     |  
+     |  Method resolution order:
+     |      timezone
+     |      tzinfo
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getinitargs__(...)
+     |      pickle support
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  dst(...)
+     |      Return None.
+     |  
+     |  fromutc(...)
+     |      datetime in UTC -&gt; datetime in local time.
+     |  
+     |  tzname(...)
+     |      If name is specified when timezone is created, returns the name.  Otherwise returns offset as &#39;UTC(+|-)HH:MM&#39;.
+     |  
+     |  utcoffset(...)
+     |      Return fixed offset.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.timezone(datetime.timedelta(0, 86340))
+     |  
+     |  min = datetime.timezone(datetime.timedelta(-1, 60))
+     |  
+     |  utc = datetime.timezone.utc
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from tzinfo:
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      -&gt; (cls, state)
+    
+    class tzinfo(builtins.object)
+     |  Abstract base class for time zone info objects.
+     |  
+     |  Methods defined here:
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  __reduce__(...)
+     |      -&gt; (cls, state)
+     |  
+     |  dst(...)
+     |      datetime -&gt; DST offset in minutes east of UTC.
+     |  
+     |  fromutc(...)
+     |      datetime in UTC -&gt; datetime in local time.
+     |  
+     |  tzname(...)
+     |      datetime -&gt; string name of time zone.
+     |  
+     |  utcoffset(...)
+     |      datetime -&gt; timedelta showing offset from UTC, negative values indicating West of UTC
+
+DATA
+    MAXYEAR = 9999
+    MINYEAR = 1
+    datetime_CAPI = &lt;capsule object &#34;datetime.datetime_CAPI&#34;&gt;
+
+FILE
+    /usr/lib/python3.5/datetime.py
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -19872,6 +21508,71 @@ deactivate                 <span class="c1"># Deactivating virtual environment</
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Database">Database<a class="anchor-link" href="#Database">&#182;</a></h1><p>Python has many many libraries for managing databases. Here we use SQLite3 that comes with Python when you installed it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;simple-db&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;simple-db&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create a new table.</span>
+<span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;create table music ( title text, artist text, rating int)&#39;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="c1"># Insert new data to music table.</span>
+<span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;insert into music (title, artist, rating) values (&quot;Immigrant Sont&quot;, &quot;Led Zeppelin&quot;,8)&#39;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;insert into music (title, artist, rating) values (&quot;GOT&quot;, &quot;Ramin Djawadi&quot;,9)&#39;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;insert into music (title, artist, rating) values (&quot;The map of reality&quot;, &quot;The New Smiths&quot;,9)&#39;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="c1"># Grab stored data from our database.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;select * from music&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;Immigrant Sont&#39;, &#39;Led Zeppelin&#39;, 8)
+(&#39;GOT&#39;, &#39;Ramin Djawadi&#39;, 9)
+(&#39;The map of reality&#39;, &#39;The New Smiths&#39;, 9)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
