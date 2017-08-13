@@ -11882,7 +11882,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>Make Python write your name.</p>
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><ul>
+<li>Make Python write you name</li>
+</ul>
 
 </div>
 </div>
@@ -12230,8 +12232,10 @@ number:  12
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>What number is save in x?</p>
-<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">7</span>
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><ul>
+<li>What is saved in variable <code>equation_result</code>?</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">equation_result</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">7</span>
 </pre></div>
 
 </div>
@@ -14472,7 +14476,7 @@ Last Prime Number: 23
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you use a star before variable name in a left side of assignment, it means packing variables. But other places it means unpacking the sequence.</p>
+<p>If you use a star before variable name in a left side of assignment, it means packing variables.</p>
 
 </div>
 </div>
@@ -14815,6 +14819,15 @@ Last Prime Number: 23
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you wanted to define a tupe with only one value in it, you should write it like:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
@@ -15124,7 +15137,7 @@ Last Prime Number: 23
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ciphertext</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;QRNE NYVPR,</span>
@@ -15137,11 +15150,11 @@ Last Prime Number: 23
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">,</span>
                <span class="s1">&#39;NOPQRSTUVWXYZABCDEFGHIJKLM&#39;</span><span class="p">)))</span>
 
-<span class="c1"># Key for encryption and decryption.</span>
+<span class="c1"># Generate a dictionary with comprehension</span>
 <span class="n">subs</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">,</span>
                              <span class="s1">&#39;NOPQRSTUVWXYZABCDEFGHIJKLM&#39;</span><span class="p">)}</span>
-<span class="n">subs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
-             <span class="s1">&#39;,&#39;</span><span class="p">:</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">})</span>
+
+<span class="c1"># </span>
 <span class="c1"># subs = {&#39;J&#39;: &#39;W&#39;, &#39;Y&#39;: &#39;L&#39;, &#39;I&#39;: &#39;V&#39;,</span>
 <span class="c1">#         &#39;A&#39;: &#39;N&#39;, &#39;B&#39;: &#39;O&#39;, &#39;C&#39;: &#39;P&#39;,</span>
 <span class="c1">#         &#39;D&#39;: &#39;Q&#39;, &#39;W&#39;: &#39;J&#39;, &#39;F&#39;: &#39;S&#39;,</span>
@@ -15150,9 +15163,11 @@ Last Prime Number: 23
 <span class="c1">#         &#39;Z&#39;: &#39;M&#39;, &#39;S&#39;: &#39;F&#39;, &#39;O&#39;: &#39;B&#39;,</span>
 <span class="c1">#         &#39;R&#39;: &#39;E&#39;, &#39;H&#39;: &#39;U&#39;, &#39;X&#39;: &#39;K&#39;,</span>
 <span class="c1">#         &#39;N&#39;: &#39;A&#39;, &#39;L&#39;: &#39;Y&#39;, &#39;G&#39;: &#39;T&#39;,</span>
-<span class="c1">#         &#39;V&#39;: &#39;I&#39;, &#39;T&#39;: &#39;G&#39;, &#39;.&#39;: &#39;.&#39;,</span>
-<span class="c1">#         &#39; &#39;: &#39; &#39;, &#39;,&#39;: &#39;,&#39;, &#39;\n&#39;: &#39;\n&#39;}</span>
+<span class="c1">#         &#39;V&#39;: &#39;I&#39;, &#39;T&#39;: &#39;G&#39;}</span>
+
 <span class="c1"># Characters that is not encrypted.</span>
+<span class="n">subs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
+             <span class="s1">&#39;,&#39;</span><span class="p">:</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">})</span>
 
 
 <span class="n">plaintext</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">subs</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">ciphertext</span><span class="p">])</span>
@@ -16368,14 +16383,16 @@ Factorial of 10 is 3628800.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>Get a number from user and print all prime numbers less than that number.</p>
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><ul>
+<li>Get a number from user and print all prime numbers less than that number.</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">biggest_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter a number to get all prime numbers less than that: &#39;</span><span class="p">))</span>
@@ -16420,14 +16437,15 @@ Factorial of 10 is 3628800.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">1</span>
+
 <span class="k">for</span> <span class="n">prime</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
     <span class="n">total</span> <span class="o">*=</span> <span class="n">prime</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplication of first </span><span class="si">{}</span><span class="s1"> prime numbers is </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">),</span> <span class="n">total</span><span class="p">))</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -16444,7 +16462,7 @@ Factorial of 10 is 3628800.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Multiplication of first 25 prime numbers is 2305567963945518424753102147331756070.
+<pre>2305567963945518424753102147331756070
 </pre>
 </div>
 </div>
@@ -16986,7 +17004,7 @@ Enter english word: تست۲
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="k">import</span> <span class="n">pprint</span>
@@ -16997,8 +17015,8 @@ Enter english word: تست۲
     <span class="n">mul_tab</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
     <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">mul_tab</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span> <span class="o">*</span> <span class="n">column</span><span class="p">)</span>
-
-<span class="n">pprint</span><span class="p">(</span><span class="n">mul_tab</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="n">mul_tab</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -17016,11 +17034,72 @@ Enter english word: تست۲
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Enter size of multiplication table: 5
+[[1]]
+
+[[1, 2]]
+
+[[1, 2, 3]]
+
+[[1, 2, 3, 4]]
+
+[[1, 2, 3, 4, 5]]
+
+[[1, 2, 3, 4, 5], [2]]
+
+[[1, 2, 3, 4, 5], [2, 4]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12, 16]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12, 16, 20]]
+
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12, 16, 20], [5]]
+
+[[1, 2, 3, 4, 5],
+ [2, 4, 6, 8, 10],
+ [3, 6, 9, 12, 15],
+ [4, 8, 12, 16, 20],
+ [5, 10]]
+
+[[1, 2, 3, 4, 5],
+ [2, 4, 6, 8, 10],
+ [3, 6, 9, 12, 15],
+ [4, 8, 12, 16, 20],
+ [5, 10, 15]]
+
+[[1, 2, 3, 4, 5],
+ [2, 4, 6, 8, 10],
+ [3, 6, 9, 12, 15],
+ [4, 8, 12, 16, 20],
+ [5, 10, 15, 20]]
+
 [[1, 2, 3, 4, 5],
  [2, 4, 6, 8, 10],
  [3, 6, 9, 12, 15],
  [4, 8, 12, 16, 20],
  [5, 10, 15, 20, 25]]
+
 </pre>
 </div>
 </div>
@@ -17040,7 +17119,7 @@ Enter english word: تست۲
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="k">import</span> <span class="n">pprint</span>  <span class="c1"># Better way</span>
@@ -17148,15 +17227,21 @@ Enter english word: تست۲
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fibo_num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
 <span class="n">fibo_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter fibo count: &#39;</span><span class="p">))</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">fibo_count</span><span class="p">):</span>
-    <span class="n">fibo_num</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fibo_num</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">fibo_num</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># for i in range(2, fibo_count):</span>
+<span class="c1">#     fibo_num.append(fibo_num[-1] + fibo_num[-2])</span>
+
+<span class="n">nothing</span> <span class="o">=</span> <span class="p">[</span><span class="n">fibo_num</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fibo_num</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">fibo_num</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">fibo_count</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nothing</span><span class="p">)</span>
+
 
 <span class="nb">print</span><span class="p">(</span><span class="n">fibo_num</span><span class="p">)</span>
 </pre></div>
@@ -17176,7 +17261,8 @@ Enter english word: تست۲
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Enter fibo count: 10
-[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+[None, None, None, None, None, None, None, None]
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 </pre>
 </div>
 </div>
@@ -17191,9 +17277,6 @@ Enter english word: تست۲
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter first number: &#39;</span><span class="p">)),</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter second number: &#39;</span><span class="p">))</span>
-
-<span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="n">num2</span><span class="p">:</span>
-    <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num1</span>
 
 <span class="k">while</span> <span class="n">num1</span> <span class="o">%</span> <span class="n">num2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num1</span> <span class="o">%</span> <span class="n">num2</span>
@@ -17228,11 +17311,11 @@ Enter second number: 17
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Jodi&#39;</span><span class="p">,</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;&gt;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">names</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">names</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -17249,7 +17332,7 @@ Enter second number: 17
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Jodi&lt;&gt;Alice&lt;&gt;Bob
+<pre>JodiAliceBob
 </pre>
 </div>
 </div>
@@ -17260,20 +17343,21 @@ Enter second number: 17
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Size of triangle: &#39;</span><span class="p">))</span>
 
-<span class="c1"># for row in range(1, size + 1):</span>
-<span class="c1">#     stars = []</span>
-<span class="c1">#     for i in range(row):</span>
-<span class="c1">#         stars.append(&#39;*&#39;)</span>
-<span class="c1">#     print(&#39;&#39;.join(stars))</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># [start, stop)</span>
+    <span class="n">stars</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+        <span class="n">stars</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<span class="c1">#     print(stars)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stars</span><span class="p">))</span>
 <span class="c1">#     print(&#39;*&#39; * row)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">row</span> 
-                 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]))</span>
+<span class="c1"># print(&#39;\n&#39;.join([&#39;*&#39; * row </span>
+<span class="c1">#                  for row in range(1, size + 1)]))</span>
 </pre></div>
 
 </div>
@@ -17291,7 +17375,6 @@ Enter second number: 17
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Size of triangle: 5
-[&#39;*&#39;, &#39;**&#39;, &#39;***&#39;, &#39;****&#39;, &#39;*****&#39;]
 *
 **
 ***
@@ -17864,7 +17947,7 @@ TWO,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">third</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fourth</span><span class="o">=</span><span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">fifth</span><span class="p">,</span> <span class="o">**</span><span class="n">sixth</span><span class="p">):</span>
@@ -17875,7 +17958,7 @@ TWO,
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fifth:  </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fifth</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sixth:  </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sixth</span><span class="p">))</span>
 
-<span class="n">function</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">function</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -17897,7 +17980,7 @@ Second: 2
 Third:  3
 Fourth: 4
 Fifth:  (5, 6)
-Sixth:  {}
+Sixth:  {&#39;test&#39;: 123}
 </pre>
 </div>
 </div>
@@ -18489,7 +18572,7 @@ First -&gt; Third
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (stop)</span>
@@ -19377,6 +19460,133 @@ $$ 12 = 2^2 \times 3^1 $$<div class="highlight"><pre><span></span><span class="p
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fraction</span><span class="p">(</span><span class="n">frac_num</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">1.0</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">frac_num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">result</span>
+
+    
+<span class="k">def</span> <span class="nf">pi</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">fraction</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="o">**-</span><span class="n">precision</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">fraction</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.1415926331440347
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">factors</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">for</span> <span class="n">prime</span> <span class="ow">in</span> <span class="n">prime_range</span><span class="p">(</span><span class="n">number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="c1"># Find the right superscript for specific prime number.</span>
+        <span class="n">superscript</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">number</span> <span class="o">%</span> <span class="n">prime</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">number</span> <span class="o">/=</span> <span class="n">prime</span>
+            <span class="n">superscript</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1"># If superscript is bigger that zero, we add it to result</span>
+        <span class="k">if</span> <span class="n">superscript</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">prime</span><span class="p">,</span> <span class="n">superscript</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">factors</span><span class="p">(</span><span class="mi">2017</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[(2017, 1)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">factors</span><span class="p">(</span><span class="mi">21000</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[(2, 3), (3, 1), (5, 3), (7, 1)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -19650,6 +19860,89 @@ Line Number 8.
 Line Number 9.
 Line Number 10.
 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2><ul>
+<li>Write a function that get a filename and return dictionary that keys are words in a file and values are number of occurences of that word.</li>
+<li>Write a function that get a word and a filename and return number of occurences of the word in the filename.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">frequency_of_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span><span class="n">words</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">words</span><span class="p">)}</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">frequency_of_words</span><span class="p">(</span><span class="s1">&#39;todo.md&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;2.&#39;: 2, &#39;book&#39;: 1, &#39;code.&#39;: 1, &#39;change&#39;: 1, &#39;Add&#39;: 4, &#39;7.&#39;: 1, &#39;...&#39;: 1, &#39;like&#39;: 1, &#39;some&#39;: 1, &#39;should&#39;: 1, &#39;see&#39;: 1, &#39;Introduction&#39;: 1, &#39;Data&#39;: 1, &#39;lists,&#39;: 1, &#39;loop&#39;: 1, &#39;camel&#39;: 1, &#39;1.&#39;: 2, &#39;9.&#39;: 1, &#39;Making&#39;: 1, &#39;code&#39;: 1, &#39;of&#39;: 3, &#39;scientific&#39;: 1, &#39;comprehension&#39;: 1, &#39;to:&#39;: 1, &#39;Write&#39;: 1, &#39;Object&#39;: 1, &#39;header.&#39;: 1, &#39;`input`&#39;: 1, &#39;Move&#39;: 1, &#39;that&#39;: 1, &#39;front&#39;: 1, &#39;names&#39;: 1, &#39;Decision&#39;: 1, &#39;Functions&#39;: 1, &#39;with&#39;: 2, &#39;tuples,&#39;: 1, &#39;section.&#39;: 2, &#39;effects.&#39;: 1, &#39;5.&#39;: 2, &#39;Loops&#39;: 1, &#39;section&#39;: 3, &#39;Separate&#39;: 1, &#39;each&#39;: 2, &#39;Python,&#39;: 1, &#39;after&#39;: 1, &#39;Gather&#39;: 1, &#39;and&#39;: 2, &#39;a&#39;: 2, &#39;4.&#39;: 2, &#39;strings&#39;: 1, &#39;mistakes,&#39;: 1, &#39;Built-in&#39;: 1, &#39;Search&#39;: 1, &#39;to&#39;: 2, &#39;8.&#39;: 1, &#39;proper&#39;: 1, &#39;for&#39;: 3, &#39;Jupyter,&#39;: 1, &#39;lost&#39;: 1, &#39;3.&#39;: 2, &#39;spelling.&#39;: 1, &#39;Types&#39;: 1, &#39;Sequences&#39;: 1, &#39;case.&#39;: 1, &#39;under&#39;: 1, &#39;6.&#39;: 1, &#39;exercises&#39;: 1, &#39;Oriented&#39;: 1, &#39;function.&#39;: 1, &#39;Programming&#39;: 1, &#39;line&#39;: 1, &#39;input&#39;: 1, &#39;in&#39;: 1, &#39;comment&#39;: 3}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">frequency_of_word</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">frequency_of_words</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">)[</span><span class="n">word</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">frequency_of_word</span><span class="p">(</span><span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;todo.md&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
 </pre>
 </div>
 </div>
