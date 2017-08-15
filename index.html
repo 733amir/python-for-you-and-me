@@ -18572,13 +18572,12 @@ First -&gt; Third
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (stop)</span>
 <span class="c1"># (start, stop)</span>
 <span class="c1"># (start, stop, step)</span>
-
 
 <span class="k">def</span> <span class="nf">prime_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A function with parameter that is completely like</span>
@@ -18616,8 +18615,19 @@ First -&gt; Third
 
 <span class="k">for</span> <span class="n">prime</span> <span class="ow">in</span> <span class="n">prime_range</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1050</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is a prime number.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prime</span><span class="p">))</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">prime_range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">prime_range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -18709,6 +18719,53 @@ First -&gt; Third
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">prime_range</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A function with parameter that is completely like</span>
+<span class="sd">    range function but instead of generate natural numbers</span>
+<span class="sd">    here the function generates prime numbers.&quot;&quot;&quot;</span>
+    
+    <span class="c1"># Evaluate start, stop and step by what user of this</span>
+    <span class="c1"># function code want it to do.</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="n">args</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;WRONG&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+    
+    <span class="c1"># A list to store all primes that I found.</span>
+    <span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># Generate all primes from start to stop.</span>
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">):</span>
+        <span class="n">is_prime</span> <span class="o">=</span> <span class="kc">True</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">is_prime</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">break</span>
+        
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">:</span>
+            <span class="n">primes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+    <span class="c1"># Slice primes with step that user wants and return</span>
+    <span class="c1"># it.</span>
+    <span class="k">return</span> <span class="n">primes</span><span class="p">[::</span><span class="n">step</span><span class="p">]</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -19218,7 +19275,7 @@ class _Helper(builtins.object)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])))</span>
@@ -19398,7 +19455,7 @@ class _Helper(builtins.object)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">marks</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;John&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;Sophia&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Sara&#39;</span><span class="p">:</span> <span class="mf">16.7</span><span class="p">}</span>
@@ -19685,14 +19742,13 @@ $$ 12 = 2^2 \times 3^1 $$<div class="highlight"><pre><span></span><span class="p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">rwfile_test</span><span class="p">():</span>
     <span class="n">rwfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;rwfile&#39;</span><span class="p">,</span> <span class="s1">&#39;a+&#39;</span><span class="p">)</span>
     <span class="n">rwfile</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">rwfile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">line_count</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Line Number </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">line_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">rwfile</span><span class="p">)</span>
     <span class="n">rwfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -19700,6 +19756,8 @@ $$ 12 = 2^2 \times 3^1 $$<div class="highlight"><pre><span></span><span class="p
 <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;rwfile&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Clear file.</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">rwfile_test</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;rwfile&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -19721,40 +19779,6 @@ Line Number 2.
 Line Number 3.
 Line Number 4.
 Line Number 5.
-
-Line Number 1.
-Line Number 2.
-Line Number 3.
-Line Number 4.
-Line Number 5.
-Line Number 6.
-
-Line Number 1.
-Line Number 2.
-Line Number 3.
-Line Number 4.
-Line Number 5.
-Line Number 6.
-Line Number 7.
-
-Line Number 1.
-Line Number 2.
-Line Number 3.
-Line Number 4.
-Line Number 5.
-Line Number 6.
-Line Number 7.
-Line Number 8.
-
-Line Number 1.
-Line Number 2.
-Line Number 3.
-Line Number 4.
-Line Number 5.
-Line Number 6.
-Line Number 7.
-Line Number 8.
-Line Number 9.
 
 </pre>
 </div>
@@ -19828,7 +19852,7 @@ Line Number 9.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;rwfile&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">rwfile</span><span class="p">:</span>
@@ -19854,11 +19878,6 @@ Line Number 2.
 Line Number 3.
 Line Number 4.
 Line Number 5.
-Line Number 6.
-Line Number 7.
-Line Number 8.
-Line Number 9.
-Line Number 10.
 
 </pre>
 </div>
@@ -19882,13 +19901,13 @@ Line Number 10.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">frequency_of_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">words</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span><span class="n">words</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">words</span><span class="p">)}</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span><span class="n">words</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()}</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">frequency_of_words</span><span class="p">(</span><span class="s1">&#39;todo.md&#39;</span><span class="p">))</span>
@@ -19908,7 +19927,7 @@ Line Number 10.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;2.&#39;: 2, &#39;book&#39;: 1, &#39;code.&#39;: 1, &#39;change&#39;: 1, &#39;Add&#39;: 4, &#39;7.&#39;: 1, &#39;...&#39;: 1, &#39;like&#39;: 1, &#39;some&#39;: 1, &#39;should&#39;: 1, &#39;see&#39;: 1, &#39;Introduction&#39;: 1, &#39;Data&#39;: 1, &#39;lists,&#39;: 1, &#39;loop&#39;: 1, &#39;camel&#39;: 1, &#39;1.&#39;: 2, &#39;9.&#39;: 1, &#39;Making&#39;: 1, &#39;code&#39;: 1, &#39;of&#39;: 3, &#39;scientific&#39;: 1, &#39;comprehension&#39;: 1, &#39;to:&#39;: 1, &#39;Write&#39;: 1, &#39;Object&#39;: 1, &#39;header.&#39;: 1, &#39;`input`&#39;: 1, &#39;Move&#39;: 1, &#39;that&#39;: 1, &#39;front&#39;: 1, &#39;names&#39;: 1, &#39;Decision&#39;: 1, &#39;Functions&#39;: 1, &#39;with&#39;: 2, &#39;tuples,&#39;: 1, &#39;section.&#39;: 2, &#39;effects.&#39;: 1, &#39;5.&#39;: 2, &#39;Loops&#39;: 1, &#39;section&#39;: 3, &#39;Separate&#39;: 1, &#39;each&#39;: 2, &#39;Python,&#39;: 1, &#39;after&#39;: 1, &#39;Gather&#39;: 1, &#39;and&#39;: 2, &#39;a&#39;: 2, &#39;4.&#39;: 2, &#39;strings&#39;: 1, &#39;mistakes,&#39;: 1, &#39;Built-in&#39;: 1, &#39;Search&#39;: 1, &#39;to&#39;: 2, &#39;8.&#39;: 1, &#39;proper&#39;: 1, &#39;for&#39;: 3, &#39;Jupyter,&#39;: 1, &#39;lost&#39;: 1, &#39;3.&#39;: 2, &#39;spelling.&#39;: 1, &#39;Types&#39;: 1, &#39;Sequences&#39;: 1, &#39;case.&#39;: 1, &#39;under&#39;: 1, &#39;6.&#39;: 1, &#39;exercises&#39;: 1, &#39;Oriented&#39;: 1, &#39;function.&#39;: 1, &#39;Programming&#39;: 1, &#39;line&#39;: 1, &#39;input&#39;: 1, &#39;in&#39;: 1, &#39;comment&#39;: 3}
+<pre>{&#39;book&#39;: 1, &#39;change&#39;: 1, &#39;Search&#39;: 1, &#39;Types&#39;: 1, &#39;like&#39;: 1, &#39;some&#39;: 1, &#39;should&#39;: 1, &#39;see&#39;: 1, &#39;Introduction&#39;: 1, &#39;Data&#39;: 1, &#39;loop&#39;: 1, &#39;camel&#39;: 1, &#39;scientific&#39;: 1, &#39;Decision&#39;: 1, &#39;comprehension&#39;: 1, &#39;Write&#39;: 1, &#39;Object&#39;: 1, &#39;front&#39;: 1, &#39;Move&#39;: 1, &#39;that&#39;: 1, &#39;names&#39;: 1, &#39;Add&#39;: 4, &#39;Functions&#39;: 1, &#39;Loops&#39;: 1, &#39;section&#39;: 3, &#39;Separate&#39;: 1, &#39;each&#39;: 2, &#39;of&#39;: 3, &#39;Gather&#39;: 1, &#39;and&#39;: 2, &#39;strings&#39;: 1, &#39;comment&#39;: 3, &#39;a&#39;: 2, &#39;to&#39;: 2, &#39;proper&#39;: 1, &#39;lost&#39;: 1, &#39;Making&#39;: 1, &#39;Sequences&#39;: 1, &#39;after&#39;: 1, &#39;with&#39;: 2, &#39;under&#39;: 1, &#39;exercises&#39;: 1, &#39;Oriented&#39;: 1, &#39;for&#39;: 3, &#39;Programming&#39;: 1, &#39;line&#39;: 1, &#39;input&#39;: 1, &#39;in&#39;: 1, &#39;code&#39;: 1}
 </pre>
 </div>
 </div>
@@ -19922,8 +19941,8 @@ Line Number 10.
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">frequency_of_word</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">frequency_of_words</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">)[</span><span class="n">word</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">frequency_of_word</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">frequency_of_words</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">fname</span><span class="p">)[</span><span class="n">word</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">frequency_of_word</span><span class="p">(</span><span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;todo.md&#39;</span><span class="p">))</span>
 </pre></div>
@@ -20026,7 +20045,40 @@ Line Number 10.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.141592653589793
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
@@ -20047,7 +20099,7 @@ Line Number 10.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2017-07-28 10:16:52.773547
+<pre>2017-08-13 10:27:45.651693
 </pre>
 </div>
 </div>
@@ -20720,6 +20772,46 @@ FILE
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">primes</span> <span class="k">import</span> <span class="n">prime_range</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">prime_range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ImportError</span>                               Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-40-4bc1b0dd828c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> primes <span class="ansi-green-fg">import</span> prime_range
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>prime_range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ImportError</span>: cannot import name &#39;prime_range&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -20731,15 +20823,19 @@ FILE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How to try for exceptions.</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;always execute&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Value Error occured.&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -20756,7 +20852,9 @@ FILE
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>invalid literal for int() with base 10: &#39;hi&#39;
+<pre>always execute
+Value Error occured.
+Hello world!
 </pre>
 </div>
 </div>
@@ -20776,7 +20874,7 @@ FILE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How to trye for different exceptions.</span>
@@ -20808,8 +20906,9 @@ FILE
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Enter a number: hi
-invalid literal for int() with base 10: &#39;hi&#39;
+<pre>Enter a number: 123
+Square of 123 is 15129.
+name &#39;some_name_that_does_not_exist&#39; is not defined
 Running code continues.
 </pre>
 </div>
@@ -20887,26 +20986,29 @@ Running code continues.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Generate-Error">Generate Error<a class="anchor-link" href="#Generate-Error">&#182;</a></h2><p>If you wanted to signal an error you can do it by using <code>Exception</code> object for now. After OOP section, we learn new and more standard way for defining our exception.</p>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2><ul>
+<li>Divide by zero</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multiplication_table</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">column</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> argument is </span><span class="si">{}</span><span class="s1">. It should be bigger than zero!&#39;</span>
-                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="p">([</span><span class="s1">&#39;Row&#39;</span><span class="p">,</span> <span class="n">row</span><span class="p">]</span> <span class="k">if</span> <span class="n">row</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">[</span><span class="s1">&#39;Column&#39;</span><span class="p">,</span> <span class="n">column</span><span class="p">])))</span>
-    <span class="k">return</span> <span class="p">[[</span><span class="n">i</span><span class="o">*</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;num1: &#39;</span><span class="p">),</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;num2: &#39;</span><span class="p">)</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">multiplication_table</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num1</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">num2</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">ve</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ERROR: You should enter numbers!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">num1</span><span class="o">/</span><span class="n">num2</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">zde</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ERROR: Second number can not be zero!&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -20923,8 +21025,77 @@ Running code continues.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Row argument is -1. It should be bigger than zero!
+<pre>num1: abc
+num2: def
+ERROR: You should enter numbers!
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generate-Error">Generate Error<a class="anchor-link" href="#Generate-Error">&#182;</a></h2><p>If you wanted to signal an error you can do it by using <code>Exception</code> object for now. After OOP section, we learn new and more standard way for defining our exception.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multiplication_table</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">column</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> argument is </span><span class="si">{}</span><span class="s1">. It should be bigger than zero!&#39;</span>
+                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="p">([</span><span class="s1">&#39;Row&#39;</span><span class="p">,</span> <span class="n">row</span><span class="p">]</span> <span class="k">if</span> <span class="n">row</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">[</span><span class="s1">&#39;Column&#39;</span><span class="p">,</span> <span class="n">column</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">i</span><span class="o">*</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">multiplication_table</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># try:</span>
+<span class="c1">#     print(multiplication_table(2, -3))</span>
+<span class="c1"># except Exception as e:</span>
+<span class="c1">#     print(e)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">Exception</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-59-ef7b8dcf8014&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">*</span>j <span class="ansi-green-fg">for</span> j <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> column <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> row <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>multiplication_table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-red-fg"># try:</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-59-ef7b8dcf8014&gt;</span> in <span class="ansi-cyan-fg">multiplication_table</span><span class="ansi-blue-fg">(row, column)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span>     <span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">(</span>row <span class="ansi-blue-fg">&lt;=</span> <span class="ansi-cyan-fg">0</span> <span class="ansi-green-fg">or</span> column <span class="ansi-blue-fg">&lt;=</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>         raise Exception(&#39;{} argument is {}. It should be bigger than zero!&#39;
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">                         .format(*([&#39;Row&#39;, row] if row &lt;= 0 else [&#39;Column&#39;, column])))
+</span><span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">*</span>j <span class="ansi-green-fg">for</span> j <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> column <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> row <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+
+<span class="ansi-red-fg">Exception</span>: Row argument is -1. It should be bigger than zero!</pre>
 </div>
 </div>
 
@@ -21036,6 +21207,7 @@ Running code continues.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This is a simple Car class.&quot;&quot;&quot;</span>
     <span class="n">number_of_wheels</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="c1"># It&#39;s defined withing the structures of our class.</span>
@@ -21832,6 +22004,18 @@ two main ways to reuse code.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><ul>
+<li>Write Person (coord &amp; walk) and Employee classes.</li>
+<li>Write Point and Line classes.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Overwriting-Methods">Overwriting Methods<a class="anchor-link" href="#Overwriting-Methods">&#182;</a></h3><p>If you overwrite a method of parent class, the functionality of that method from parent class is gone.</p>
 
 </div>
@@ -21906,7 +22090,7 @@ two main ways to reuse code.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -21918,7 +22102,7 @@ two main ways to reuse code.</p>
         <span class="k">return</span> <span class="mi">0</span>
 
 <span class="k">class</span> <span class="nc">Rectangle</span><span class="p">(</span><span class="n">Shape</span><span class="p">):</span>
-<span class="c1">#     tag = &#39;Rectangle&#39;</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="s1">&#39;Rectangle&#39;</span>
     
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
@@ -21961,7 +22145,7 @@ two main ways to reuse code.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Area of our square is: 100 and Tag is: Rhombus
+<pre>Area of our square is: 100 and Tag is: Rectangle
 </pre>
 </div>
 </div>
@@ -22345,7 +22529,7 @@ deactivate                 <span class="c1"># Deactivating virtual environment</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3 ways to import tkinter module</span>
@@ -22414,7 +22598,7 @@ deactivate                 <span class="c1"># Deactivating virtual environment</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
@@ -22441,7 +22625,7 @@ deactivate                 <span class="c1"># Deactivating virtual environment</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
@@ -22454,7 +22638,7 @@ deactivate                 <span class="c1"># Deactivating virtual environment</
 
 <span class="n">password_frame</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
 <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">password_frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Password&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">LEFT</span><span class="p">)</span>
-<span class="n">password_entry</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">password_frame</span><span class="p">)</span>
+<span class="n">password_entry</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">password_frame</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
 <span class="n">password_entry</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">LEFT</span><span class="p">)</span>
 <span class="n">password_frame</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">X</span><span class="p">)</span>
 
@@ -22462,10 +22646,12 @@ deactivate                 <span class="c1"># Deactivating virtual environment</
     <span class="n">username</span> <span class="o">=</span> <span class="n">username_entry</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
     <span class="n">password</span> <span class="o">=</span> <span class="n">password_entry</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="s1">&#39;username&#39;</span> <span class="ow">and</span> <span class="n">password</span> <span class="o">==</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span>
-        <span class="k">pass</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct username and password.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ERROR: Wrong username and password. username: </span><span class="si">{}</span><span class="s1">, password: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">))</span>
 
 <span class="n">button_frame</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-<span class="n">login_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">button_frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Login&#39;</span><span class="p">)</span>
+<span class="n">login_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">button_frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Login&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">login</span><span class="p">)</span>
 <span class="n">login_button</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">X</span><span class="p">)</span>
 <span class="n">button_frame</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">X</span><span class="p">)</span>
 
@@ -22473,6 +22659,25 @@ deactivate                 <span class="c1"># Deactivating virtual environment</
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ERROR: Wrong username and password. username: username, password: passsword
+Correct username and password.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
