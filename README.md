@@ -21,13 +21,14 @@ things in it.
 I want to make book to start from almost zero knowledge and take a tour to almost every major category that Python is
 used.
 
-## How can I help?
+## How can you help?
 
-Clone the notebook and start writing. Almost anything will help.
-Thanks :)
+Go [here](https://zarinp.al/@amirkhazaie 'Amir Khazaie ZarinPal') and donate me as much as this book helped you. :)
 
-## I'm sorry, who are you?
+Or you can clone the notebook and start editing or adding things. Then send me a pull request.
 
-I'm computer engineering student that almost always code python and love AI.
+## Who am I?
+
+I'm computer engineering student that almost always code python and love Artificial Intelligence.
 
 If you want to contact me, my email address is `733amir@gmail.com`. You can find me on telegram with `@geamny` too.
